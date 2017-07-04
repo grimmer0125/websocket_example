@@ -1,0 +1,29 @@
+{
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "28F075D219DE16AB2B6D96B650C57F52B2A39E7A" : 9223372036854775807,
+    "2A270499284A31AE3CBCFD57F264CA0ED9418B5E" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "6F885FBA-9B7A-429A-A9AD-755FE26670E2",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "28F075D219DE16AB2B6D96B650C57F52B2A39E7A" : "..\/cartahome\/CARTAvis-externals\/ThirdParty\/casa\/trunk",
+    "2A270499284A31AE3CBCFD57F264CA0ED9418B5E" : "uWebSockets\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ws_example",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ws_example.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/open-bitbucket.nrao.edu\/scm\/casa\/casa.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "28F075D219DE16AB2B6D96B650C57F52B2A39E7A"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/uNetworking\/uWebSockets.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2A270499284A31AE3CBCFD57F264CA0ED9418B5E"
+    }
+  ]
+}

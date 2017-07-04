@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		8E76F94A1F0B81580053155C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8E76F9491F0B81580053155C /* main.cpp */; };
+		8E76F9581F0B926F0053155C /* libssl.1.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E76F9571F0B926F0053155C /* libssl.1.0.0.dylib */; };
+		8E76F95A1F0B92D00053155C /* libuv.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E76F9591F0B92D00053155C /* libuv.1.dylib */; };
+		8E76F95C1F0B94E60053155C /* libuWS.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E76F95B1F0B94E60053155C /* libuWS.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,9 @@
 /* Begin PBXFileReference section */
 		8E76F9461F0B81580053155C /* ws_example */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ws_example; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E76F9491F0B81580053155C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		8E76F9571F0B926F0053155C /* libssl.1.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libssl.1.0.0.dylib; path = ../../../../usr/local/Cellar/openssl/1.0.2l/lib/libssl.1.0.0.dylib; sourceTree = "<group>"; };
+		8E76F9591F0B92D00053155C /* libuv.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libuv.1.dylib; path = ../../../../usr/local/Cellar/libuv/1.12.0/lib/libuv.1.dylib; sourceTree = "<group>"; };
+		8E76F95B1F0B94E60053155C /* libuWS.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libuWS.dylib; path = ../../../../usr/local/lib/libuWS.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +38,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E76F95A1F0B92D00053155C /* libuv.1.dylib in Frameworks */,
+				8E76F95C1F0B94E60053155C /* libuWS.dylib in Frameworks */,
+				8E76F9581F0B926F0053155C /* libssl.1.0.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +52,7 @@
 			children = (
 				8E76F9481F0B81580053155C /* ws_example */,
 				8E76F9471F0B81580053155C /* Products */,
+				8E76F9521F0B8D070053155C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +70,16 @@
 				8E76F9491F0B81580053155C /* main.cpp */,
 			);
 			path = ws_example;
+			sourceTree = "<group>";
+		};
+		8E76F9521F0B8D070053155C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8E76F9591F0B92D00053155C /* libuv.1.dylib */,
+				8E76F9571F0B926F0053155C /* libssl.1.0.0.dylib */,
+				8E76F95B1F0B94E60053155C /* libuWS.dylib */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,9 +187,20 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/usr/local/opt/openssl/include,
+					/usr/local/opt/libuv/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/opt/openssl/lib,
+					/usr/local/lib,
+					/usr/local/opt/libuv/lib,
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-lz";
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -209,8 +240,19 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include,
+					/usr/local/opt/openssl/include,
+					/usr/local/opt/libuv/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/opt/openssl/lib,
+					/usr/local/lib,
+					/usr/local/opt/libuv/lib,
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-lz";
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -218,6 +260,11 @@
 		8E76F94E1F0B81580053155C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/openssl/1.0.2l/lib,
+					/usr/local/Cellar/libuv/1.12.0/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -225,6 +272,11 @@
 		8E76F94F1F0B81580053155C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/openssl/1.0.2l/lib,
+					/usr/local/Cellar/libuv/1.12.0/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
