@@ -25,5 +25,5 @@ int main(int argc, char *argv[])
 
     qDebug() << "end to test websocket";
 
-    return a.exec(); // will block at here since QtCoreApplication's event loop
+    return a.exec(); // will block at here since QCoreApplication's event loop
 }
