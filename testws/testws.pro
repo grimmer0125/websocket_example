@@ -1,11 +1,10 @@
-# pure cpp console type does not have these two lines
 QT += core
-QT -= gui
+QT -= gui # pure Qt console
 
 CONFIG += c++11
 
 TARGET = testws
-CONFIG += console
+CONFIG += console # pure Qt console
 CONFIG -= app_bundle
 
 TEMPLATE = app
